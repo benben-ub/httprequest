@@ -20,7 +20,7 @@ handler = WebhookHandler('678c31199ad1c9ed93f3339d8f3c72fa')
 
 #   接收 LINE 的資訊
 user_id='1657339819'
-@app.route('/push_function/<push_message>')
+@app.route('/push_function/<string:push_message>')
 def push_message(push_message):
     line_bot_api.push_message(user_id,TextSendMessage(text=push_message))
 
