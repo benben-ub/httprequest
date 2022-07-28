@@ -43,7 +43,9 @@ def echo(event):
     )
 
 
-user_id='1657339819'
+user_id='Ub438edf251ed7ca1d058d64d048b2970'
+
+
 @app.route("/push_function/<string:push_text_str>")
 def push_message(push_text_str):
     line_bot_api.push_message(user_id, TextSendMessage(text=push_text_str))
